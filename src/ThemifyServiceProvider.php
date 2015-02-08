@@ -7,15 +7,12 @@ use Nwidart\Themify\Resolver\Resolver;
 
 class ThemifyServiceProvider extends ServiceProvider
 {
-
     /**
      * Register the service provider.
      * @return void
      */
     public function register()
     {
-        $this->package('nwidart/themify', 'themify');
-
         $this->registerResolver();
         $this->registerViewFinder();
         $this->registerMainClass();
@@ -28,8 +25,8 @@ class ThemifyServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app['router']->filter('themify.resolve', 'ThemeFilter');
-        $this->app['router']->when('*', 'themify.resolve');
+        // $this->app['router']->filter('themify.resolve', 'ThemeFilter');
+        // $this->app['router']->when('*', 'themify.resolve');
     }
 
     /**
