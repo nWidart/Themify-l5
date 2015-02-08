@@ -1,0 +1,28 @@
+{
+  "name": "nwidart/themify",
+  "description": "Add basic theme functionality to a Laravel application.",
+  "authors": [
+    {
+      "name": "Nicolas Widart",
+      "email": "n.widart@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0",
+    "mockery/mockery": "dev-master",
+    "orchestra/testbench": "~2.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Nwidart\\Themify\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
