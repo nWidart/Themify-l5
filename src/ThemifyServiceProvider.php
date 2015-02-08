@@ -13,6 +13,8 @@ class ThemifyServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->registerConfiguration();
+
         $this->registerResolver();
         $this->registerViewFinder();
         $this->registerMainClass();
@@ -36,6 +38,17 @@ class ThemifyServiceProvider extends ServiceProvider
     public function provides()
     {
         return array();
+    }
+
+    /**
+     * Register the configuration file so Laravel can publish them
+     * Also merges the published config file with original
+     */
+    private function registerConfiguration()
+    {
+        $configPath = __DIR__ . '/../config/themify.php';
+        $this->mergeConfigFrom($configPath, 'themify');
+        $this->publishes([$configPath => config_path('themify.php')]);
     }
 
     /**
