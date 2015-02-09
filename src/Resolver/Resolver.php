@@ -5,15 +5,13 @@ use Illuminate\Container\Container;
 class Resolver {
 
     /**
-    * @var Illuminate\Foundation\Application $app
+    * @var \Illuminate\Foundation\Application $app
     */
     protected $app;
 
     /**
      * Constructor.
-     *
-     * @param Illuminate\Foundation\Application $app
-     * @return Nwidart\Themify\Resolver\Resolver
+     * @param Container|\Illuminate\Foundation\Application $app
      */
     public function __construct(Container $app)
     {
@@ -36,7 +34,7 @@ class Resolver {
         }
 
         // Return default theme in configuration options
-        if (($theme = $this->app->make('config')->get('themify::default_theme')) !== '') {
+        if (($theme = $this->app->make('config')->get('themify.default_theme')) !== '') {
             return $theme;
         }
     }
