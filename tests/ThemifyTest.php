@@ -181,9 +181,9 @@ class ThemifyTest extends Orchestra\Testbench\TestCase {
      *
      * @return array
      */
-    protected function getPackageProviders()
+    protected function getPackageProviders($app)
     {
-        return array('Nwidart\Themify\ThemifyServiceProvider');
+        return ['Nwidart\Themify\ThemifyServiceProvider'];
     }
 
     /**
@@ -191,11 +191,9 @@ class ThemifyTest extends Orchestra\Testbench\TestCase {
      *
      * @return array
      */
-    protected function getPackageAliases()
+    protected function getPackageAliases($app)
     {
-        return array(
-
-        );
+        return ['Nwidart\Themify\Facades\Themify'];
     }
 
 }
