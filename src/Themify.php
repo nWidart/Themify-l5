@@ -24,12 +24,12 @@ class Themify {
     protected $finder;
 
     /**
-     * @var Illuminate\Events\Dispatcher
+     * @var \Illuminate\Events\Dispatcher
      */
     protected $events;
 
     /**
-     * @var Illuminate\Config\Repository
+     * @var \Illuminate\Config\Repository
      */
     protected $config;
 
@@ -98,7 +98,7 @@ class Themify {
      */
     public function assetsPath()
     {
-        $themeAssetsDir = $this->config->get('themify::themes_assets_path');
+        $themeAssetsDir = $this->config->get('themify.themes_assets_path');
         $theme = $this->get();
 
         return $themeAssetsDir . '/' . $theme;
@@ -128,7 +128,7 @@ class Themify {
      */
     protected function buildThemePath($theme)
     {
-        return $this->config['themify::themes_path'] . DIRECTORY_SEPARATOR . $theme;
+        return $this->config['themify.themes_path'] . DIRECTORY_SEPARATOR . $theme;
     }
 
 }
