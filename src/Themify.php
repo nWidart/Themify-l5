@@ -14,12 +14,12 @@ class Themify {
     protected $currentTheme;
 
     /**
-     * @var Nwidart\Themify\Resolver\Resolver
+     * @var \Nwidart\Themify\Resolver\Resolver
      */
     protected $resolver;
 
     /**
-     * @var Nwidart\Themify\Finder\ThemeViewFinder
+     * @var \Nwidart\Themify\Finder\ThemeViewFinder
      */
     protected $finder;
 
@@ -35,12 +35,10 @@ class Themify {
 
     /**
      * Constructor.
-     *
-     * @param Nwidart\Themify\Resolver\Resolver $resolver
-     * @param Nwidart\Themify\Finder\Finder
-     * @param Illuminate\Events\Dispatcher
-     * @param Illuminate\Config\Repository
-     * @return Nwidart\Themify\Themify
+     * @param \Nwidart\Themify\Resolver\Resolver $resolver
+     * @param Finder $finder
+     * @param EventDispatcher $events
+     * @param Config $config
      */
     public function __construct(Resolver $resolver, Finder $finder, EventDispatcher $events, Config $config)
     {
