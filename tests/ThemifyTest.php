@@ -5,6 +5,9 @@ use Nwidart\Themify\Themify;
 
 class ThemifyTest extends Orchestra\Testbench\TestCase {
 
+    /**
+     * @var \Nwidart\Themify\Themify
+     */
     protected $t;
 
     public function setUp()
@@ -13,7 +16,7 @@ class ThemifyTest extends Orchestra\Testbench\TestCase {
 
         $this->t = $this->app->make('themify');
 
-        $this->app['router']->enableFilters();
+       // $this->app['router']->enableFilters();
     }
 
     public function tearDown()
