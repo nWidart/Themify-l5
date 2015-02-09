@@ -41,7 +41,7 @@ Installation
     'Illuminate\View\ViewServiceProvider',
     'Illuminate\Workbench\WorkbenchServiceProvider',
 
-    'Mpedrera\Themify\ThemifyServiceProvider',
+    'Nwidart\Themify\ThemifyServiceProvider',
 ),
 ```
 
@@ -54,7 +54,7 @@ Installation
     'Validator'       => 'Illuminate\Support\Facades\Validator',
     'View'            => 'Illuminate\Support\Facades\View',
 
-    'Themify'         => 'Mpedrera\Themify\Facades\Themify',
+    'Themify'         => 'Nwidart\Themify\Facades\Themify',
 ),
 ```
 
