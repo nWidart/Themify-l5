@@ -1,7 +1,7 @@
 <?php
 
 use Mockery as M;
-use Mpedrera\Themify\Finder\ThemeViewFinder;
+use Nwidart\Themify\Finder\ThemeViewFinder;
 
 class ThemeViewFinderTest extends PHPUnit_Framework_TestCase {
 
@@ -20,8 +20,8 @@ class ThemeViewFinderTest extends PHPUnit_Framework_TestCase {
     }
 
     public function testCanAddLocation()
-    {     
-        $this->createViewFinder();   
+    {
+        $this->createViewFinder();
         $this->viewFinder->addThemeLocation($this->location, 1);
 
         $this->assertContains($this->location, $this->viewFinder->getPaths());

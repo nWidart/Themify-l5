@@ -1,7 +1,7 @@
 <?php
 
 use Mockery as M;
-use Mpedrera\Themify\Themify;
+use Nwidart\Themify\Themify;
 
 class ThemifyTest extends Orchestra\Testbench\TestCase {
 
@@ -55,7 +55,7 @@ class ThemifyTest extends Orchestra\Testbench\TestCase {
 
     public function testFilterDetectsControllerTheme()
     {
-        // Create mock controller with all needed methods 
+        // Create mock controller with all needed methods
         // and $theme property
         $c = $this->mockController('FooController', 'footheme');
 
@@ -69,7 +69,7 @@ class ThemifyTest extends Orchestra\Testbench\TestCase {
 
     public function testSetThemeOverridesControllerTheme()
     {
-        // Create mock controller with all needed methods 
+        // Create mock controller with all needed methods
         // and $theme property
         $c = $this->mockController('FooController', 'footheme');
 
@@ -91,7 +91,7 @@ class ThemifyTest extends Orchestra\Testbench\TestCase {
 
     public function testControllerThemeDoesNotOverridePreviousSet()
     {
-        // Create mock controller with all needed methods 
+        // Create mock controller with all needed methods
         // and $theme property
         $c = $this->mockController('FooController', 'footheme');
 
@@ -116,7 +116,7 @@ class ThemifyTest extends Orchestra\Testbench\TestCase {
      */
     protected function mockResolver()
     {
-        return M::mock('Mpedrera\Themify\Resolver\Resolver');
+        return M::mock('Nwidart\Themify\Resolver\Resolver');
     }
 
     /**
@@ -124,7 +124,7 @@ class ThemifyTest extends Orchestra\Testbench\TestCase {
      */
     protected function mockViewFinder()
     {
-        return M::mock('Mpedrera\Themify\Finder\ThemeViewFinder');
+        return M::mock('Nwidart\Themify\Finder\ThemeViewFinder');
     }
 
     /**
@@ -183,7 +183,7 @@ class ThemifyTest extends Orchestra\Testbench\TestCase {
      */
     protected function getPackageProviders()
     {
-        return array('Mpedrera\Themify\ThemifyServiceProvider');
+        return array('Nwidart\Themify\ThemifyServiceProvider');
     }
 
     /**

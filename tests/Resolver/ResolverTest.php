@@ -1,7 +1,7 @@
 <?php
 
 use Mockery as M;
-use Mpedrera\Themify\Resolver\Resolver;
+use Nwidart\Themify\Resolver\Resolver;
 
 class ResolverTest extends PHPUnit_Framework_TestCase {
 
@@ -31,8 +31,8 @@ class ResolverTest extends PHPUnit_Framework_TestCase {
         // Mock corresponding controller for the router action
         // and assign a theme property
         $this->mockAppController('FooController', 'footheme');
-        
-        // Check that resolver is resolving to the 
+
+        // Check that resolver is resolving to the
         // previously mocked theme
         $resolver = new Resolver($this->app);
         $this->assertEquals('footheme', $resolver->resolve());
@@ -87,7 +87,7 @@ class ResolverTest extends PHPUnit_Framework_TestCase {
 
     /**
      * Mock Laravel router instance.
-     * 
+     *
      * @return void
      */
     protected function mockRouter()
@@ -127,7 +127,7 @@ class ResolverTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Make $app object return mocked config 
+     * Make $app object return mocked config
      * when needed.
      */
     protected function mockAppConfig()
@@ -149,7 +149,7 @@ class ResolverTest extends PHPUnit_Framework_TestCase {
     {
         $controller = M::mock($name);
         $controller->theme = $theme;
-        
+
         $this->app->shouldReceive('offsetGet')
             ->with($name)
             ->once()

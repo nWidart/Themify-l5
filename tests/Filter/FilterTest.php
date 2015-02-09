@@ -1,7 +1,7 @@
 <?php
 
 use Mockery as M;
-use Mpedrera\Themify\Filter\ThemeFilter;
+use Nwidart\Themify\Filter\ThemeFilter;
 
 class FilterTest extends PHPUnit_Framework_TestCase {
 
@@ -43,7 +43,7 @@ class FilterTest extends PHPUnit_Framework_TestCase {
      */
     protected function mockThemify()
     {
-        $this->themify = M::mock('Mpedrera\Themify\Themify');
+        $this->themify = M::mock('Nwidart\Themify\Themify');
     }
 
     /**
