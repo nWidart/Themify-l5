@@ -1,7 +1,6 @@
 <?php namespace Nwidart\Themify\Resolver;
 
 use Illuminate\Container\Container;
-use Illuminate\Routing\Controller;
 
 class Resolver {
 
