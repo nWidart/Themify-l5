@@ -53,7 +53,7 @@ class ResolverTest extends PHPUnit_Framework_TestCase {
         // so we create a config mock
         $this->mockAppConfig();
         $this->config->shouldReceive('get')
-            ->with('themify::default_theme')
+            ->with('themify.default_theme')
             ->andReturn('footheme');
 
         // Check that resolver is resolving correctly
@@ -76,7 +76,7 @@ class ResolverTest extends PHPUnit_Framework_TestCase {
         // so we create a config mock and set it to empty
         $this->mockAppConfig();
         $this->config->shouldReceive('get')
-            ->with('themify::default_theme')
+            ->with('themify.default_theme')
             ->andReturn('');
 
         // Check that resolver is resolving to null,
