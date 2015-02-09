@@ -2,17 +2,16 @@
 
 use Illuminate\Events\Dispatcher as EventDispatcher;
 use Nwidart\Themify\Themify;
-use Nwidart\Themify\Finder\ThemeViewFinder;
 
 class ThemeFilter {
 
     /**
-     * @var Nwidart\Themify\Themify
+     * @var \Nwidart\Themify\Themify
      */
     protected $themify;
 
     /**
-     * @var Illuminate\Events\Dispatcher
+     * @var \Illuminate\Events\Dispatcher
      */
     protected $events;
 
@@ -25,7 +24,7 @@ class ThemeFilter {
     public function filter()
     {
         if (($theme = $this->themify->get()) !== null) {
-            $this->events->fire('theme.set', array($theme, 5));
+            $this->events->fire('theme.set', [$theme, 5]);
         }
     }
 
