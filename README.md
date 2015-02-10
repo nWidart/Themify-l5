@@ -59,7 +59,13 @@ composer require nwidart/themify=*
 
  - Create your `themes` directory inside your application. By default, **Themify** expects an `app/themes` directory, but this can be modified in the package configuration.
 
- - Publish package configuration with artisan: `php artisan config:publish mpedrera/themify`. Then, modify settings as needed by editing `app/config/packages/mpedrera/themify/config/config.php`.
+ - Publish package configuration with artisan: 
+ 
+ ```
+ php artisan vendor:publish
+ ``` 
+ 
+ Then, modify settings as needed by editing `config/themify.php`.
 
 Usage
 -------
