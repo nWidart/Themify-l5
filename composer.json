@@ -1,6 +1,7 @@
 {
   "name": "nwidart/themify",
   "description": "Add basic theme functionality to a Laravel application.",
+  "license": "MIT",
   "authors": [
     {
       "name": "Nicolas Widart",
