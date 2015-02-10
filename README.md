@@ -1,7 +1,7 @@
 Laravel Themify
 =======
 
-Themify is a Laravel 4 package that provides basic theme functionality in a non-obtrusive way. The purpose of Themify is to allow the developer to group views inside themes, having each theme its own folder. If you have experience with Yii framework theming, you will find this package usage very familiar.
+Themify is a Laravel package that provides basic theme functionality in a non-obtrusive way. The purpose of Themify is to allow the developer to group views inside themes, having each theme its own folder. If you have experience with Yii framework theming, you will find this package usage very familiar.
 
 A sample structure folder could be like this:
 
