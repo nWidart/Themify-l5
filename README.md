@@ -7,8 +7,7 @@ A sample structure folder could be like this:
 
 ```
 app/
-├── controllers
-├── config
+├── Http
 ├── ...
 ├── themes
 │   ├── admin
