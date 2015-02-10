@@ -28,11 +28,10 @@ Installation
 -------
  - Use composer to install the package:
 
-```json
-"require": {
-    "nwidart/themify": "*"
-}
 ```
+composer require nwidart/themify=*
+```
+
  - Add the ServiceProvider to your service provider list inside `app/config/app.php`:
 
 ```php
