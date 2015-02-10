@@ -3,7 +3,8 @@
 use Mockery as M;
 use Nwidart\Themify\Filter\ThemeFilter;
 
-class FilterTest extends PHPUnit_Framework_TestCase {
+class FilterTest extends PHPUnit_Framework_TestCase
+{
 
     protected $filter;
     protected $themify;
@@ -61,5 +62,4 @@ class FilterTest extends PHPUnit_Framework_TestCase {
     {
         $this->filter = new ThemeFilter($this->themify, $this->events);
     }
-
 }

@@ -2,7 +2,8 @@
 
 use Illuminate\Container\Container;
 
-class Resolver {
+class Resolver
+{
 
     /**
     * @var \Illuminate\Foundation\Application $app
@@ -67,8 +68,8 @@ class Resolver {
 
         if (($pos = strpos($route, '@')) !== false) {
             $controllerName = substr($route, 0, $pos);
+
             return $this->app[$controllerName];
         }
     }
-
 }

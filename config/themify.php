@@ -8,7 +8,7 @@ return array(
 
     // Internal folder where theme views are stored.
     // Defaults to (...)/app/themes
-    // 
+    //
     // The package will search for views directly
     // inside each theme folder, so you don't need
     // a 'views' folder inside your theme:
@@ -24,9 +24,9 @@ return array(
     // assets are stored. If you changed your public folder in your
     // app config, it will be automatically detected.
     //
-    // Do not include the public folder itself, or 
+    // Do not include the public folder itself, or
     // leading/trailing slashes.
-    // 
+    //
     // With default value, your assets structure would be:
     // public
     // |_ assets

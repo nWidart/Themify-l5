@@ -3,7 +3,8 @@
 use Mockery as M;
 use Nwidart\Themify\Themify;
 
-class ThemifyTest extends Orchestra\Testbench\TestCase {
+class ThemifyTest extends Orchestra\Testbench\TestCase
+{
 
     /**
      * @var \Nwidart\Themify\Themify
@@ -77,8 +78,7 @@ class ThemifyTest extends Orchestra\Testbench\TestCase {
         $c = $this->mockController('FooController', 'footheme');
 
         // Add a after filter to app, to set a different theme
-        $this->app->after(function($request)
-        {
+        $this->app->after(function ($request) {
             $this->t->set('bartheme');
         });
 
@@ -99,8 +99,7 @@ class ThemifyTest extends Orchestra\Testbench\TestCase {
         $c = $this->mockController('FooController', 'footheme');
 
         // Add a before filter to app, to set a different theme
-        $this->app->before(function($request)
-        {
+        $this->app->before(function ($request) {
             $this->t->set('bartheme');
         });
 
@@ -171,8 +170,7 @@ class ThemifyTest extends Orchestra\Testbench\TestCase {
         $controller->theme = $theme;
 
         // Bind controller class to the mocked controller
-        $this->app->bind($name, function($app) use ($controller)
-        {
+        $this->app->bind($name, function ($app) use ($controller) {
             return $controller;
         });
 
@@ -198,5 +196,4 @@ class ThemifyTest extends Orchestra\Testbench\TestCase {
     {
         return ['Nwidart\Themify\Facades\Themify'];
     }
-
 }

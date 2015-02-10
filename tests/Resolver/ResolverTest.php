@@ -3,7 +3,8 @@
 use Mockery as M;
 use Nwidart\Themify\Resolver\Resolver;
 
-class ResolverTest extends PHPUnit_Framework_TestCase {
+class ResolverTest extends PHPUnit_Framework_TestCase
+{
 
     protected $app;
     protected $router;
@@ -155,5 +156,4 @@ class ResolverTest extends PHPUnit_Framework_TestCase {
             ->once()
             ->andReturn($controller);
     }
-
 }

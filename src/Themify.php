@@ -1,12 +1,13 @@
 <?php namespace Nwidart\Themify;
 
-use Nwidart\Themify\Resolver\Resolver;
-use Nwidart\Themify\Finder\ThemeViewFinder as Finder;
-use Illuminate\Events\Dispatcher as EventDispatcher;
-use Illuminate\Config\Repository as Config;
 use \InvalidArgumentException;
+use Illuminate\Config\Repository as Config;
+use Illuminate\Events\Dispatcher as EventDispatcher;
+use Nwidart\Themify\Finder\ThemeViewFinder as Finder;
+use Nwidart\Themify\Resolver\Resolver;
 
-class Themify {
+class Themify
+{
 
     /**
      * @var string $currentTheme
@@ -58,7 +59,7 @@ class Themify {
      */
     public function set($theme)
     {
-        if ( ! is_string($theme)) {
+        if (! is_string($theme)) {
             throw new InvalidArgumentException('$theme parameter must be a string.');
         }
 
@@ -113,8 +114,7 @@ class Themify {
      */
     protected function addThemeSetListener()
     {
-        $this->events->listen('theme.set', function($theme, $priority)
-        {
+        $this->events->listen('theme.set', function ($theme, $priority) {
             $themePath = $this->buildThemePath($theme);
             $this->finder->addThemeLocation($themePath, $priority);
         });
@@ -130,5 +130,4 @@ class Themify {
     {
         return $this->config['themify.themes_path'] . DIRECTORY_SEPARATOR . $theme;
     }
-
 }

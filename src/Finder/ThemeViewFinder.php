@@ -1,8 +1,6 @@
 <?php namespace Nwidart\Themify\Finder;
 
 use Illuminate\View\FileViewFinder;
-use Illuminate\Filesystem\Filesystem;
-use Illuminate\Config\Repository as Config;
 
 /**
  * Add functionality to the original FileViewFinder from
@@ -13,7 +11,8 @@ use Illuminate\Config\Repository as Config;
  * in IoC container with this class, it will be used transparently
  * by the application.
  */
-class ThemeViewFinder extends FileViewFinder {
+class ThemeViewFinder extends FileViewFinder
+{
 
     /**
      * Location of the last theme added to paths.
@@ -63,5 +62,4 @@ class ThemeViewFinder extends FileViewFinder {
     {
         return $this->prevLocation ? array_search($this->prevLocation, $this->paths) : false;
     }
-
 }

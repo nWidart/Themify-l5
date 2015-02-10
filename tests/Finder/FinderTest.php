@@ -3,7 +3,8 @@
 use Mockery as M;
 use Nwidart\Themify\Finder\ThemeViewFinder;
 
-class ThemeViewFinderTest extends PHPUnit_Framework_TestCase {
+class ThemeViewFinderTest extends PHPUnit_Framework_TestCase
+{
 
     protected $files;
     protected $viewFinder;
@@ -92,5 +93,4 @@ class ThemeViewFinderTest extends PHPUnit_Framework_TestCase {
     {
         $this->viewFinder = new ThemeViewFinder($this->files, $paths);
     }
-
 }

@@ -3,7 +3,8 @@
 use Illuminate\Events\Dispatcher as EventDispatcher;
 use Nwidart\Themify\Themify;
 
-class ThemeFilter {
+class ThemeFilter
+{
 
     /**
      * @var \Nwidart\Themify\Themify
@@ -27,5 +28,4 @@ class ThemeFilter {
             $this->events->fire('theme.set', [$theme, 5]);
         }
     }
-
 }
